@@ -121,7 +121,7 @@ while true; do
         | sed '/null/d' \
         | paste -s -d ' \n' \
         | tr -d ' ' \
-        | sed -e "s/^/https\:\/\/media\.8ch\.net\/file_store\//" \
+        | sed -e "s/^/https\:\/\/media\.8ch\.net\/$board\/src\//" \
         > $dir/$thread.files
 
     ## This wget line will download the files from the file using -i
